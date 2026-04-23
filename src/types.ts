@@ -2,14 +2,14 @@ type Project = {
   name: string;
   description: string;
   url: string;
-  tech: string;
+  tech: string[];
 };
 
 type Experience = {
   title: string;
   company: string;
   period: string;
-  description: string;
+  description: string[];
 };
 
 type About = {
@@ -24,19 +24,18 @@ type Contact = {
   github: string;
 };
 
-type Skill = {
-  category: string;
-  skill: string;
+type Skills = {
+  [category: string]: string[];
 };
 
 type Portfolio = {
   name: string;
   title: string;
   about: About;
-  skills: Skill[];
+  skills: Skills;
   projects: Project[];
   experience: Experience[];
   contact: Contact;
 };
 
-export type { Project, Experience, About, Contact, Skill, Portfolio };
+export type { Project, Experience, About, Contact, Skills, Portfolio };
