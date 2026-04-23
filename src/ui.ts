@@ -32,5 +32,5 @@ export function printDivider(): void {
 
 export function printFooter(): void {
   printDivider();
-  console.log(chalk.gray("  Type 'help' to see all commands\n"));
+  console.log(chalk.gray('  Type "help" to see all commands\n'));
 }
