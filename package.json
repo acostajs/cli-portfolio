@@ -1,0 +1,61 @@
+{
+  "name": "juan-acosta-cli-portfolio",
+  "version": "0.0.1",
+  "description": "My personal portfolio in a CLI format, easy to read.",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "portfolio": "dist/index.js"
+  },
+  "keywords": [
+    "portfolio",
+    "cli",
+    "developer",
+    "interactive",
+    "terminal"
+  ],
+  "author": "Juan Acosta <acosta.juan@icloud.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/acostajs/cli-portfolio.git"
+  },
+  "homepage": "https://github.com/acostajs/cli-portfolio#readme",
+  "bugs": {
+    "url": "https://github.com/acostajs/cli-portfolio/issues"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts interactive",
+    "lint": "eslint src/",
+    "lint:fix": "eslint src/ --fix",
+    "type-check": "tsc --noEmit",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "format:check": "prettier --check \"src/**/*.ts\"",
+    "prepare": "husky install"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "cli-table3": "^0.6.5",
+    "commander": "^11.1.0",
+    "enquirer": "^2.4.1"
+  },
+  "devDependencies": {
+    "@types/node": "^25.6.0",
+    "@typescript-eslint/eslint-plugin": "^8.59.0",
+    "@typescript-eslint/parser": "^8.59.0",
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^9.1.2",
+    "eslint-plugin-prettier": "^5.5.5",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.5.2",
+    "prettier": "^3.8.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.59.0"
+  }
+}
