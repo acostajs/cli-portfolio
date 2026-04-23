@@ -1,8 +1,9 @@
 import chalk from 'chalk';
-import { portfolio } from './data.js';
+import { portfolio } from './data';
 
 export function clearScreen(): void {
   console.clear();
+  printHeader();
 }
 
 export function printHeader(): void {
@@ -32,5 +33,5 @@ export function printDivider(): void {
 
 export function printFooter(): void {
   printDivider();
-  console.log(chalk.gray('  Type "help" to see all commands\n'));
+  console.log(chalk.gray('  Choose "Help" to see all commands\n'));
 }
