@@ -11,15 +11,7 @@ import {
 } from './display';
 import { clearScreen, printDivider } from './ui';
 
-type MenuChoice =
-  | 'about'
-  | 'skills'
-  | 'projects'
-  | 'experience'
-  | 'contact'
-  | 'clear'
-  | 'help'
-  | 'exit';
+type MenuChoice = 'about' | 'skills' | 'projects' | 'experience' | 'contact' | 'help' | 'exit';
 
 const menuChoices: { name: MenuChoice; message: string }[] = [
   { name: 'about', message: '- About' },
@@ -27,7 +19,6 @@ const menuChoices: { name: MenuChoice; message: string }[] = [
   { name: 'projects', message: '- Projects' },
   { name: 'experience', message: '- Experience' },
   { name: 'contact', message: '- Contact' },
-  { name: 'clear', message: '- Clear' },
   { name: 'help', message: '- Help' },
   { name: 'exit', message: '- Exit' },
 ];
@@ -38,7 +29,6 @@ const handlers: Record<Exclude<MenuChoice, 'exit'>, () => void> = {
   projects: () => showProjects(portfolio),
   experience: () => showExperience(portfolio),
   contact: () => showContact(portfolio),
-  clear: () => clearScreen(),
   help: () => showHelp(),
 };
 
@@ -54,7 +44,7 @@ export async function runInteractive(): Promise<void> {
       const { choice } = await enquirer.prompt<{ choice: MenuChoice }>({
         type: 'select',
         name: 'choice',
-        message: 'What would you like to see?',
+        message: 'What would you like to see ?',
         choices: menuChoices,
       });
 

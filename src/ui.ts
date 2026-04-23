@@ -1,4 +1,5 @@
 import chalk from 'chalk';
+import figlet from 'figlet';
 import { portfolio } from './data';
 
 export function clearScreen(): void {
@@ -7,24 +8,12 @@ export function clearScreen(): void {
 }
 
 export function printHeader(): void {
-  const width = 46;
-  const name = portfolio.name;
-  const title = portfolio.title;
+  const name = figlet.textSync(portfolio.name, { font: 'ogre' });
+  const title = figlet.textSync(portfolio.title, { font: 'standard' });
 
-  console.log(chalk.cyan('╔' + '═'.repeat(width) + '╗'));
-  console.log(chalk.cyan('║') + ' '.repeat(width) + chalk.cyan('║'));
-  console.log(
-    chalk.cyan('║') +
-      chalk.white.bold(name.padStart((width + name.length) / 2).padEnd(width)) +
-      chalk.cyan('║')
-  );
-  console.log(
-    chalk.cyan('║') +
-      chalk.gray(title.padStart((width + title.length) / 2).padEnd(width)) +
-      chalk.cyan('║')
-  );
-  console.log(chalk.cyan('║') + ' '.repeat(width) + chalk.cyan('║'));
-  console.log(chalk.cyan('╚' + '═'.repeat(width) + '╝'));
+  console.log('');
+  console.log(chalk.white(name));
+  console.log(chalk.white(title));
 }
 
 export function printDivider(): void {
