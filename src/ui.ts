@@ -8,8 +8,8 @@ export function clearScreen(): void {
 }
 
 export function printHeader(): void {
-  const name = figlet.textSync(portfolio.name, { font: 'ogre' });
-  const title = figlet.textSync(portfolio.title, { font: 'standard' });
+  const name = figlet.textSync(portfolio.name, { font: 'Ogre' });
+  const title = figlet.textSync(portfolio.title, { font: 'Standard' });
 
   console.log('');
   console.log(chalk.white(name));
