@@ -1,6 +1,6 @@
 import chalk from 'chalk';
 import enquirer from 'enquirer';
-import { portfolio } from './data';
+import { portfolio } from './data.js';
 import {
   showAbout,
   showSkills,
@@ -8,8 +8,8 @@ import {
   showExperience,
   showContact,
   showHelp,
-} from './display';
-import { clearScreen, printDivider, printFooter } from './ui';
+} from './display.js';
+import { clearScreen, printDivider, printFooter } from './ui.js';
 
 type MenuChoice = 'about' | 'skills' | 'projects' | 'experience' | 'contact' | 'help' | 'exit';
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import { program } from 'commander';
-import { portfolio } from './data';
+import { portfolio } from './data.js';
 import {
   showAbout,
   showSkills,
@@ -10,8 +10,8 @@ import {
   showContact,
   showHelp,
 } from './display';
-import { printHeader, printFooter } from './ui';
-import { runInteractive } from './interactive';
+import { printHeader, printFooter } from './ui.js';
+import { runInteractive } from './interactive.js';
 
 program
   .name(portfolio.name.toLowerCase().replace(' ', '-'))

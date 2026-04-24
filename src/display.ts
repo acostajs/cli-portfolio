@@ -1,5 +1,5 @@
 import chalk from 'chalk';
-import type { Portfolio } from './types';
+import type { Portfolio } from './types.js';
 
 export function showAbout(data: Portfolio): void {
   console.log(chalk.cyan.bold('\n  Hey, nice to meet you 👋\n'));

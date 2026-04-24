@@ -1,6 +1,6 @@
 import chalk from 'chalk';
 import figlet from 'figlet';
-import { portfolio } from './data';
+import { portfolio } from './data.js';
 
 export function clearScreen(): void {
   console.clear();
