@@ -1,6 +1,6 @@
 {
   "name": "meet-juan",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Meet Juan Acosta — an interactive CLI portfolio built with TypeScript.",
   "type": "module",
   "main": "dist/index.js",
