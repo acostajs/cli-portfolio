@@ -1,18 +1,23 @@
 {
-  "name": "juan-acosta-cli-portfolio",
-  "version": "0.0.1",
-  "description": "My personal portfolio in a CLI format, easy to read.",
+  "name": "meet-juan",
+  "version": "0.1.0",
+  "description": "Meet Juan Acosta — an interactive CLI portfolio built with TypeScript.",
   "type": "module",
   "main": "dist/index.js",
   "bin": {
-    "portfolio": "dist/index.js"
+    "meet-juan": "dist/index.js"
   },
+  "files": [
+    "dist"
+  ],
   "keywords": [
     "portfolio",
     "cli",
     "developer",
     "interactive",
-    "terminal"
+    "terminal",
+    "juan-acosta",
+    "meet-juan"
   ],
   "author": "Juan Acosta <acosta.juan@icloud.com>",
   "license": "MIT",
@@ -40,7 +45,6 @@
   },
   "dependencies": {
     "chalk": "^5.3.0",
-    "cli-table3": "^0.6.5",
     "commander": "^11.1.0",
     "enquirer": "^2.4.1",
     "figlet": "^1.11.0"

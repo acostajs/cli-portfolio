@@ -5,12 +5,12 @@ export const portfolio: Portfolio = {
   title: 'Full Stack Developer',
 
   about: {
-    bio: 'Passionate full-stack developer who loves building clean, scalable applications and great developer experiences.',
+    bio: 'Full-stack developer who loves turning ideas into clean, fast, and maintainable products — from the terminal to the cloud.',
     highlights: [
-      'Full-stack development with React, Node.js, and TypeScript for frontend, Python, Django, Flask, and FastAPI for backend',
-      'Strong focus on clean code and developer tooling',
-      'Experience with cloud deployment and CI/CD pipelines',
-      'Open source contributor',
+      'Full-stack across React, Node.js, TypeScript, Python, Django, FastAPI & Flask',
+      'Obsessed with clean code, good tooling, and smooth developer experiences',
+      'CI/CD pipelines, cloud deployments, and automation that just works',
+      'Open source contributor and lifelong learner',
     ],
   },
 
@@ -46,7 +46,7 @@ export const portfolio: Portfolio = {
 
   contact: {
     email: 'acosta.juan@icloud.com',
-    portfolio: 'acostajs.github.io',
+    portfolio: 'https://acostajs.github.io/',
     linkedin: 'https://www.linkedin.com/in/juan-acosta-pinilla/',
     github: 'https://github.com/acostajs',
   },

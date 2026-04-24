@@ -9,7 +9,7 @@ import {
   showContact,
   showHelp,
 } from './display';
-import { clearScreen, printDivider } from './ui';
+import { clearScreen, printDivider, printFooter } from './ui';
 
 type MenuChoice = 'about' | 'skills' | 'projects' | 'experience' | 'contact' | 'help' | 'exit';
 
@@ -35,7 +35,13 @@ const handlers: Record<Exclude<MenuChoice, 'exit'>, () => void> = {
 export async function runInteractive(): Promise<void> {
   clearScreen();
 
-  console.log(chalk.gray('\n ↕ Use arrow keys to navigate\n'));
+  console.log(
+    chalk.white('  You just ran ') + chalk.cyan('npx meet-juan') + chalk.white(' — good taste.')
+  );
+  console.log(chalk.white('  Take a look around.'));
+  console.log(chalk.gray('\n  ↕  Arrow keys to move · Enter to select\n'));
+  printFooter();
+  printDivider();
 
   let running = true;
 
@@ -44,13 +50,13 @@ export async function runInteractive(): Promise<void> {
       const { choice } = await enquirer.prompt<{ choice: MenuChoice }>({
         type: 'select',
         name: 'choice',
-        message: 'What would you like to see ?',
+        message: 'What are you curious about?',
         choices: menuChoices,
       });
 
       if (choice === 'exit') {
         clearScreen();
-        console.log(chalk.cyan('\n  Thanks for visiting! 👋\n'));
+        console.log(chalk.cyan('\n  Great having you here. See you around! 👋\n'));
         running = false;
         break;
       }
@@ -60,7 +66,7 @@ export async function runInteractive(): Promise<void> {
       printDivider();
     } catch {
       clearScreen();
-      console.log(chalk.cyan('\n  Thanks for visiting! 👋\n'));
+      console.log(chalk.cyan('\n  Great having you here. See you around! 👋\n'));
       running = false;
       break;
     }

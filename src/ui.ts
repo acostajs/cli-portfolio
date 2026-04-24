@@ -14,13 +14,14 @@ export function printHeader(): void {
   console.log('');
   console.log(chalk.white(name));
   console.log(chalk.white(title));
+  printDivider();
 }
 
 export function printDivider(): void {
-  console.log(chalk.gray('─'.repeat(48)));
+  console.log(chalk.gray('─'.repeat(100)));
 }
 
 export function printFooter(): void {
   printDivider();
-  console.log(chalk.gray('  Choose "Help" to see all commands\n'));
+  console.log(chalk.gray('  Pick "Help" to see all available commands'));
 }
