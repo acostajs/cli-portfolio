@@ -9,7 +9,7 @@ import {
   showExperience,
   showContact,
   showHelp,
-} from './display';
+} from './display.js';
 import { printHeader, printFooter } from './ui.js';
 import { runInteractive } from './interactive.js';
 
